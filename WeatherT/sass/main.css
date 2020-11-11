@@ -128,6 +128,7 @@ body {
   letter-spacing: 4.2rem;
   display: block;
   font-size: 5.2rem;
+  margin-top: 18rem;
   -webkit-animation-name: moveInLeft;
           animation-name: moveInLeft;
   -webkit-animation-duration: 1s;
@@ -217,14 +218,14 @@ body {
 
 .header {
   position: relative;
-  height: 95vh;
+  height: 55vh;
   background-image: -webkit-gradient(linear, left top, right bottom, from(rgba(247, 232, 192, 0.795)), to(rgba(107, 66, 5, 0.795))), url("../img/hero.jpg");
   background-image: linear-gradient(to right bottom, rgba(247, 232, 192, 0.795), rgba(107, 66, 5, 0.795)), url("../img/hero.jpg");
   background-size: cover;
   background-position: top;
   /* clip-path: polygon(0 0, 100% 0, 100% 52%, 0 64%); */
-  -webkit-clip-path: polygon(50% 0%, 100% 0, 100% 38%, 100% 51%, 31% 63%, 0 58%, 0 0);
-          clip-path: polygon(50% 0%, 100% 0, 100% 38%, 100% 51%, 31% 63%, 0 58%, 0 0);
+  -webkit-clip-path: polygon(0 0, 100% 0, 100% 30%, 100% 70%, 100% 88%, 30% 100%, 0 91%, 0% 30%);
+          clip-path: polygon(0 0, 100% 0, 100% 30%, 100% 70%, 100% 88%, 30% 100%, 0 91%, 0% 30%);
 }
 
 .header__logo-box {
@@ -247,5 +248,58 @@ body {
           transform: translate(-50%, -50%);
   /* transforms element, not the parent */
   text-align: center;
+}
+
+.row {
+  max-width: 114rem;
+  background-color: #d6cbcb;
+  margin: 0 auto;
+}
+
+.row:not(:last-child) {
+  margin-bottom: 8rem;
+}
+
+.row:first-child {
+  margin-top: 4rem;
+}
+
+.row::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.row [class^="col-"] {
+  background-color: aqua;
+  float: left;
+}
+
+.row [class^="col-"]:not(:last-child) {
+  margin-right: 6rem;
+}
+
+.row .col-1-of-2 {
+  width: calc((100% - 6rem) / 2);
+}
+
+.row .col-1-of-3 {
+  width: calc((100% - 6rem* 2) / 3);
+}
+
+.row .col-2-of-3 {
+  width: calc(2 * ((100% - 2 * 6rem) / 3) + 6rem);
+}
+
+.row .col-1-of-4 {
+  width: calc((100% - 6rem* 3) / 4);
+}
+
+.row .col-2-of-4 {
+  width: calc(2* ((100% - 6rem* 3) / 4) + 6rem);
+}
+
+.row .col-3-of-4 {
+  width: calc(3* ((100% - 6rem* 3) / 4) + 6rem*2);
 }
 /*# sourceMappingURL=main.css.map */
